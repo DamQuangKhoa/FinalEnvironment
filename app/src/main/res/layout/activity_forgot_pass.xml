@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_forgot_pass"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sky.afinal.view.Login.ForgotPass"
+    android:background="@color/background"
+    >
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/passReset_editText2"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:hint="Your Password"
+        android:backgroundTint="@color/cast_expanded_controller_progress_text_color"
+        android:textColorHint="@color/wallet_secondary_text_holo_dark"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:id="@+id/resetPass_button"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passReset_editText2"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_menu"
+        android:text="Reset Password "
+
+        />
+</RelativeLayout>

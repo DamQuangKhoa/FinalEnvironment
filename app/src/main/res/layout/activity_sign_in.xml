@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sky.afinal.view.Login.SignIn"
+    android:background="@color/background"
+    >
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/inputUserName_editText"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:hint="Username"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/cast_expanded_controller_progress_text_color"
+        android:textColorHint="@color/wallet_secondary_text_holo_dark"
+        android:layout_centerHorizontal="true"
+        />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/inputpPassUser_edittText"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:hint="Password"
+        android:backgroundTint="@color/cast_expanded_controller_progress_text_color"
+        android:textColorHint="@color/wallet_secondary_text_holo_dark"
+        android:layout_below="@+id/inputUserName_editText"
+        android:layout_alignRight="@+id/inputUserName_editText"
+        />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/repeatInputPassUser_edittText"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:hint="Repeat Password"
+        android:backgroundTint="@color/cast_expanded_controller_progress_text_color"
+        android:textColorHint="@color/wallet_secondary_text_holo_dark"
+        android:layout_below="@+id/inputpPassUser_edittText"
+        android:layout_alignRight="@+id/inputUserName_editText"
+        />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/inputpEmailUser_edittText"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:hint="Email"
+        android:backgroundTint="@color/cast_expanded_controller_progress_text_color"
+        android:textColorHint="@color/wallet_secondary_text_holo_dark"
+        android:layout_below="@+id/repeatInputPassUser_edittText"
+        android:layout_alignRight="@+id/inputUserName_editText"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputpEmailUser_edittText"
+        android:id="@+id/accept_Checkbox"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="50dp"
+        android:text="Accepting our licences"
+        android:layout_alignLeft="@+id/inputpEmailUser_edittText"
+        android:textAppearance="?android:textAppearanceMedium" />
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accept_Checkbox"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_menu"
+        android:text="Sign In"
+        />
+</RelativeLayout>
