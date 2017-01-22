@@ -9,7 +9,7 @@
 
 
     <Button
-        android:text="Infomation"
+        android:text="@string/infomation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -21,7 +21,7 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="Person"
+        android:text="@string/person"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/btnInfo"
@@ -32,7 +32,7 @@
         android:id="@+id/btnPerson" />
 
     <Button
-        android:text="News"
+        android:text="@string/news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnPerson"
@@ -61,7 +61,7 @@
         android:layout_marginEnd="21dp" />
 
     <Button
-        android:text="Post"
+        android:text="@string/post"
         android:textColor="#F5FFFA"
         android:layout_width="50dp"
         android:layout_height="60dp"

@@ -14,7 +14,7 @@
         android:ems="10"
         android:id="@+id/passReset_editText2"
         android:textColor="@color/cast_expanded_controller_background_color"
-        android:hint="Your Password"
+        android:hint="@string/your_password"
         android:backgroundTint="@color/cast_expanded_controller_progress_text_color"
         android:textColorHint="@color/wallet_secondary_text_holo_dark"
         android:layout_centerVertical="true"
@@ -27,7 +27,7 @@
         android:layout_below="@id/passReset_editText2"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_menu"
-        android:text="Reset Password "
+        android:text="@string/reset_password"
 
         />
 </RelativeLayout>

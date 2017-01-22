@@ -14,4 +14,16 @@
     </string>
     <string name="image_title">asdasdasdasdasd</string>
     <string name="title_activity_report">Report</string>
+    <string name="your_password">Your Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="your_username">Your Username</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_in">Sign In</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="email">Email</string>
+    <string name="accepting_our_licences">Accepting our licences</string>
+    <string name="infomation">Infomation</string>
+    <string name="person">Person</string>
+    <string name="news">News</string>
+    <string name="post">Post</string>
 </resources>
