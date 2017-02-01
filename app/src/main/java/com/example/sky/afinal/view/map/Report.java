@@ -1,4 +1,4 @@
-package com.example.sky.afinal.view.map_main;
+package com.example.sky.afinal.view.map;
 
 import android.os.Bundle;
 import android.app.Activity;

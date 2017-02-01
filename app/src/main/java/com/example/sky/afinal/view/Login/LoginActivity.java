@@ -2,6 +2,7 @@ package com.example.sky.afinal.view.Login;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,7 +36,13 @@ EditText edtUseName,editPassword;
 //        Function.makeToast(LoginActivity.this,"HELLO ABC");
 //        Intent intent = new Intent(LoginActivity.this,ForgotPass.class);
 //        startActivity(intent);
+        Log.e("ÁDASDAS","TEST ABABABABAA");
         Function.makeLog(LoginActivity.this,"test forgot pass");
         Function.changeActivity(LoginActivity.this,ForgotPass.class);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

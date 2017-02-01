@@ -1,4 +1,4 @@
-package com.example.sky.afinal.view.map_main;
+package com.example.sky.afinal.view.map;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

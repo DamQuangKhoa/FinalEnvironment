@@ -7,17 +7,6 @@
     android:background="@color/background"
     >
 
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/fab3"
-        android:layout_alignRight="@+id/fab3"
-        android:layout_marginBottom="10dp"
-
-        app:srcCompat="@android:drawable/ic_menu_agenda" />
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab3"
         android:layout_width="wrap_content"
@@ -36,17 +25,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab2"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-
-        app:srcCompat="@android:drawable/ic_menu_camera"
-        android:layout_alignTop="@+id/fab3"
-        android:layout_toLeftOf="@+id/fab3"
-        android:layout_toStartOf="@+id/fab3"
-        android:layout_marginRight="22dp"
-        android:layout_marginEnd="22dp" />
 
 
 </RelativeLayout>

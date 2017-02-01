@@ -10,8 +10,8 @@ import com.example.sky.afinal.R;
 import com.example.sky.afinal.model.News;
 import com.example.sky.afinal.view.adapter.ContactAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 public class InformationActivity extends AppCompatActivity implements View.OnClickListener{
     RecyclerView rvItems;
@@ -19,9 +19,13 @@ public class InformationActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informatio);
-        List<News> list = new Stack<>();
+        List<News> list = new ArrayList<>();
         list.add(new News("ABSBASBASBAS","Thisasdasdasdasdasdasdasdasda",R.drawable.lu));
         list.add(new News("12312312","Thisasdasdasdasdasdasdasdasda",R.drawable.lu));
+        list.add(new News("555555","Thisasdasdasdasdasdasdasdasda",R.drawable.lu));
+        list.add(new News("555555","Thisasdasdasdasdasdasdasdasda",R.drawable.lu));
+        list.add(new News("555555","Thisasdasdasdasdasdasdasdasda",R.drawable.lu));
+        list.add(new News("555555","Thisasdasdasdasdasdasdasdasda",R.drawable.lu));
         list.add(new News("555555","Thisasdasdasdasdasdasdasdasda",R.drawable.lu));
         rvItems = (RecyclerView) findViewById(R.id.rv_items);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);

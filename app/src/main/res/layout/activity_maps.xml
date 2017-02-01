@@ -24,7 +24,7 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="500px"
-        tools:context="com.example.sky.afinal.view.map_main.MapsActivity"
+        tools:context="com.example.sky.afinal.view.map.MapsActivity"
         app:layout_collapseParallaxMultiplier="1.0"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"

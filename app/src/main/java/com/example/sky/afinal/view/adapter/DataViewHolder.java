@@ -18,12 +18,13 @@ public class DataViewHolder extends RecyclerView.ViewHolder {
 
     public DataViewHolder(View itemView) {
         super(itemView);
-        tvTitle = (TextView) itemView.findViewById(R.id.title_textView);
-        tvTitle = (TextView) itemView.findViewById(R.id.discrip_textView);
+        tvTitle = (TextView)itemView.findViewById(R.id.title_textView);
+        tvDiscription = (TextView) itemView.findViewById(R.id.discrip_textView);
         imgIcon = (ImageButton) itemView.findViewById(R.id.icon_imgButton);
     }
 
     public ImageButton getImgIcon() {
+
         return imgIcon;
     }
 
@@ -32,18 +33,22 @@ public class DataViewHolder extends RecyclerView.ViewHolder {
     }
 
     public TextView getTvTitle() {
+
         return tvTitle;
     }
 
     public void setTvTitle(TextView tvTitle) {
+
         this.tvTitle = tvTitle;
     }
 
     public TextView getTvDiscription() {
+
         return tvDiscription;
     }
 
     public void setTvDiscription(TextView tvDiscription) {
+
         this.tvDiscription = tvDiscription;
     }
 }

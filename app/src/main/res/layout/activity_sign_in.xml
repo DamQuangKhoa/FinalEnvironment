@@ -13,11 +13,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:id="@+id/inputUserName_editText"
-        android:textColor="@color/cast_expanded_controller_background_color"
         android:hint="@string/your_username"
         android:layout_marginTop="100dp"
-        android:backgroundTint="@color/cast_expanded_controller_progress_text_color"
-        android:textColorHint="@color/wallet_secondary_text_holo_dark"
         android:layout_centerHorizontal="true"
         />
     <EditText
@@ -26,10 +23,7 @@
         android:inputType="numberPassword"
         android:ems="10"
         android:id="@+id/inputpPassUser_edittText"
-        android:textColor="@color/cast_expanded_controller_background_color"
         android:hint="@string/your_password"
-        android:backgroundTint="@color/cast_expanded_controller_progress_text_color"
-        android:textColorHint="@color/wallet_secondary_text_holo_dark"
         android:layout_below="@+id/inputUserName_editText"
         android:layout_alignRight="@+id/inputUserName_editText"
         />
@@ -39,10 +33,7 @@
         android:inputType="numberPassword"
         android:ems="10"
         android:id="@+id/repeatInputPassUser_edittText"
-        android:textColor="@color/cast_expanded_controller_background_color"
         android:hint="@string/repeat_password"
-        android:backgroundTint="@color/cast_expanded_controller_progress_text_color"
-        android:textColorHint="@color/wallet_secondary_text_holo_dark"
         android:layout_below="@+id/inputpPassUser_edittText"
         android:layout_alignRight="@+id/inputUserName_editText"
         />
@@ -52,10 +43,7 @@
         android:inputType="numberPassword"
         android:ems="10"
         android:id="@+id/inputpEmailUser_edittText"
-        android:textColor="@color/cast_expanded_controller_background_color"
         android:hint="@string/email"
-        android:backgroundTint="@color/cast_expanded_controller_progress_text_color"
-        android:textColorHint="@color/wallet_secondary_text_holo_dark"
         android:layout_below="@+id/repeatInputPassUser_edittText"
         android:layout_alignRight="@+id/inputUserName_editText"
         />
