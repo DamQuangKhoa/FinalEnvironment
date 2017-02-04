@@ -1,5 +1,8 @@
 package com.example.sky.afinal.view.main;
 
+import com.example.sky.afinal.view.pollution.ManHinhONhiem;
+import com.example.sky.afinal.view.traffics.ManHinhKetXe;
+
 /**
  * Created by Sky on 26/01/2017.
  */
@@ -15,24 +18,28 @@ public class SectionsPagerAdapter extends android.support.v4.app.FragmentPagerAd
     public android.support.v4.app.Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        return MainActivity.PlaceholderFragment.newInstance(position + 1);
+        switch (position) {
+            case 0:
+                return new ManHinhKetXe();
+            case 1:
+                return new ManHinhONhiem();
+        }
+        return null;
     }
 
     @Override
     public int getCount() {
-        // Show 3 total pages.
-        return 3;
+        // Show 2 total pages.
+        return 2;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "SECTION 1";
+                return "Kẹt Xe";
             case 1:
-                return "SECTION 2";
-            case 2:
-                return "SECTION 3";
+                return "Ô Nhiễm";
         }
         return null;
     }

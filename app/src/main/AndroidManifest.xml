@@ -29,8 +29,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.map.MainActivity"
-            android:label="@string/app_name"
+            android:name=".view.main.MainActivity"
+            android:label="@string/title_activity_main"
+
+
             >
 
             <intent-filter>
@@ -39,7 +41,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.news.InformationActivity" />
+        <activity  android:name=".view.map.MainActivity"
+            android:label="@string/app_name"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -65,8 +68,7 @@
         <!-- &lt;!&ndash;android:name=".view.map_main.Report"&ndash;&gt; -->
         <!-- android:label="@string/title_activity_report"></activity> -->
         <activity
-            android:name=".view.main.MainActivity"
-            android:label="@string/title_activity_main"
+            android:name=".view.news.InformationActivity"
            >
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->

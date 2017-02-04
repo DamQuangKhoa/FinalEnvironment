@@ -17,7 +17,7 @@ Button btnPost,btnPerson,btnNews,btnInf;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
+        setContentView(R.layout.activity_traffic);
 
 
 //        btnPost = (Button) findViewById(R.id.btnPost);

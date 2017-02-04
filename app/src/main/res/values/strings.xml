@@ -27,7 +27,9 @@
     <string name="news">News</string>
     <string name="post">Post</string>
     <string name="hello_world">Hello World</string>
-    <string name="test">Hello Worlddasdasdas asdasd sadasd asdasd asdas asdasdasdasasdasdasd</string>
+    <string name="test">Hello Worlddasdasdas asdasd sadasd asdasd asdas asdasdasdasasdasdasd
+        sadsdsdsdsdsasdasdasdasdas asdasdasdasd asdasd asda weqweqweqweqweqwrqwrqwrqwrqwrqwrqw </string>
+
     <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
