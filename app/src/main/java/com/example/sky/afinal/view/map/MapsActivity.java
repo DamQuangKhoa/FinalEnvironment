@@ -1,6 +1,7 @@
 package com.example.sky.afinal.view.map;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
 
 import com.example.sky.afinal.R;
@@ -11,10 +12,14 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import butterknife.Bind;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-
+    @Bind(R.id.fab)
+    FloatingActionButton fab;
+    GPSTracker gps;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +30,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //                .findFragmentById(R.id.map);
 //        mapFragment.getMapAsync(this);
     }
-
     private void setUpMapIfNeed(){
         if(mMap == null){
             SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()

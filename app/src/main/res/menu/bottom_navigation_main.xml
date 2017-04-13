@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
     <item
         android:id="@+id/action_one"
         android:enabled="true"
-        android:icon="@drawable/ic_action_name"
-        android:title="One"
+        android:icon="@mipmap/icon_tab_nearme"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_two"
         android:enabled="true"
-        android:icon="@drawable/places_ic_search"
+        android:icon="@mipmap/icon_tab_news"
         android:title="Two"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_three"
         android:enabled="true"
-        android:icon="@drawable/ic_media_route_on_light"
+        android:icon="@mipmap/ic_tab_notification"
+        android:title="Three"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_four"
+        android:enabled="true"
+        android:icon="@mipmap/ic_tab_more"
         android:title="Three"
         app:showAsAction="always" />
 </menu>

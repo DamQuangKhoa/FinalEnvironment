@@ -2,26 +2,29 @@ package com.example.sky.afinal.view.main;
 
 
 import android.os.Bundle;
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.internal.BottomNavigationMenuView;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sky.afinal.R;
-import com.example.sky.afinal.view.pollution.ManHinhONhiem;
-import com.example.sky.afinal.view.traffics.ManHinhKetXe;
+import com.example.sky.afinal.control.Function;
+import com.example.sky.afinal.view.map.GPSTracker;
+
+import java.lang.reflect.Field;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -42,8 +45,10 @@ public class MainActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
    @Bind(R.id.container ) ViewPager mViewPager;
-  private ActionBar actionBar;
+   @Bind(R.id.bottom_navigation )BottomNavigationView bottomNavigation;
 
+  private ActionBar actionBar;
+    GPSTracker gps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,19 +73,52 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Function.makeLog(MainActivity.this,"Test Location");
+                gps = new GPSTracker(MainActivity.this);
+
+                // check if GPS enabled
+                if(gps.canGetLocation()){
+
+                    double latitude = gps.getLatitude();
+                    double longitude = gps.getLongitude();
+
+                    // \n is for new line
+                    Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+                }else{
+                    // can't get location
+                    // GPS or Network is not enabled
+                    // Ask user to enable GPS/network in settings
+                    gps.showSettingsAlert();
+                }
             }
         });
 
+        // bottom navigation
+
+        this.disableShiftMode(bottomNavigation);
+//        bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                switch (item.getItemId()){
+//                    case R.id.action_one:
+//                        Function.makeLog(MainActivity.this  ,"Test Action 1");
+//                        break;
+//                    case R.id.action_two:
+//                        Function.makeLog(MainActivity.this  ,"Test Action 2");
+//                        break;
+//                    case R.id.action_three:
+//                        Function.makeLog(MainActivity.this  ,"Test Action 3");
+//                        break;
+//                    case R.id.action_four:
+//                        Function.makeLog(MainActivity.this  ,"Test Action 4");
+//                        break;
+//                }
+//                return false;
+//            }
+//        });
+//
+//    }
     }
-
-    private void initActionBar() {
-    actionBar = getSupportActionBar();
-
-
-    }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -144,4 +182,26 @@ public class MainActivity extends AppCompatActivity {
      * one of the sections/tabs/pages.
      */
 
+
+    public static void disableShiftMode(BottomNavigationView view) {
+        BottomNavigationMenuView menuView = (BottomNavigationMenuView) view.getChildAt(0);
+        try {
+            Field shiftingMode = menuView.getClass().getDeclaredField("mShiftingMode");
+            shiftingMode.setAccessible(true);
+            shiftingMode.setBoolean(menuView, false);
+            shiftingMode.setAccessible(false);
+            for (int i = 0; i < menuView.getChildCount(); i++) {
+                BottomNavigationItemView item = (BottomNavigationItemView) menuView.getChildAt(i);
+                //noinspection RestrictedApi
+                item.setShiftingMode(false);
+                // set once again checked value, so view will be updated
+                //noinspection RestrictedApi
+                item.setChecked(item.getItemData().isChecked());
+            }
+        } catch (NoSuchFieldException e) {
+            Log.e("BNVHelper", "Unable to get shift mode field", e);
+        } catch (IllegalAccessException e) {
+            Log.e("BNVHelper", "Unable to change value of shift mode", e);
+        }
+    }
 }

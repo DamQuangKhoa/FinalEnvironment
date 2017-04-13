@@ -68,8 +68,6 @@ android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="end|bottom"
-        app:itemBackground="@color/facebook_normal"
-        app:itemIconTint="@color/buttonRed"
-        app:itemTextColor="#FFFFFF"
+        app:itemBackground="@color/background_direction"
         app:menu="@menu/bottom_navigation_main" />
 </LinearLayout>
